@@ -1,113 +1,33 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import React from 'react';
+import Name from './Name';
 
-export default function Pakistan() {
-    return (
-        <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-            <nav aria-label="secondary mailbox folders">
-                <List>
+const Pakistan = () => {
+  const players = [
+    "Babar Azam (c)",
+    "Shadab Khan",
+    "Abdullah Shafique",
+    "Fakhar Zaman",
+    "Haris Rauf",
+    "Hasan Ali",
+    "Iftikhar Ahmed",
+    "Imam-ul-Haq",
+    "Mohammad Nawaz",
+    "Mohammad Rizwan",
+    "Mohammad Wasim Jnr",
+    "Salman Ali Agha",
+    "Saud Shakeel",
+    "Shaheen Shah Afridi",
+    "Usama Mir",
+  ];
 
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                        </ListItemButton>
-                    </ListItem>
+  return (
+    <div>
+      <h1>Pakistan Team</h1>
+      {players.map((player, index) => (
+        <Name key={index} name={player} />
+      ))}
+    </div>
+  );
+};
 
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary="01. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="02. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary="03. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="04. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary="05. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="06. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary="07. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="08. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary="09. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="10. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary="11. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="12. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="13. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary="14. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component="a">
-                            <ListItemText primary="15. " />
-                        </ListItemButton>
-                    </ListItem>
-
-                </List>
-            </nav>
-        </Box>
-    );
-}
+export default Pakistan;
